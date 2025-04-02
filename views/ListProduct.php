@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h2>Danh sách các sản phẩm</h2>
+        <a href="?action=addProduct">Thêm sản phẩm</a>
         <div class="table-responsive">
             <table class="table table-bordered table-hover shadow-sm bg-white">
                 <thead class="table-primary text-center">
@@ -20,6 +21,7 @@
                         <th>Giá sp</th>
                         <th>Ảnh sp</th>
                         <th>Danh mục sp</th>
+                        <th>Thao tác</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -34,6 +36,10 @@
                             <td><?= $item['product_price'] ?></td>
                             <td><?= $item['product_img'] ?></td>
                             <td><?= $item['category_id'] ?></td>
+                            <td>
+                                <a href="?action=DeleteProduct&id=<?= $item['product_id'] ?>">Xóa</a>
+                                <a href="">sửa</a>
+                            </td>
                         </tr>
 
                         <?php $stt++;
