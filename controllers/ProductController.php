@@ -12,8 +12,10 @@ class ProductController
     }
 
     public $productModel;
+    public $cateModel;
     public function __construct()
     {
+        $this->cateModel = new CateModel();
         $this->productModel = new ProductModel();
     }
 
@@ -26,6 +28,7 @@ class ProductController
 
     public function addProduct()
     {
+        $categories = $this->cateModel->getAll();
         require_once PATH_VIEW . 'AddProduct.php';
     }
 

@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h2>Danh sách các sản phẩm</h2>
-        <a href="?action=addProduct">Thêm sản phẩm</a>
+        <a class="btn btn-secondary" href="?action=addProduct">Thêm sản phẩm</a>
         <div class="table-responsive">
             <table class="table table-bordered table-hover shadow-sm bg-white">
                 <thead class="table-primary text-center">

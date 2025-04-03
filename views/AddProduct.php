@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thêm sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -33,8 +33,12 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="cate_id">Mã danh mục:</label>
-                                <input class="form-control" type="text" name="cate_id"><br>
+                                <label class="form-label" for="cate_id">Danh mục sp:</label>
+                                <select name="cate_id" class="form-control">
+                                    <?php foreach($categories as $cate){ ?>
+                                        <option value="<?= $cate['category_id'] ?>"><?= $cate['category_name']; ?></option>
+                                    <?php }?>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-success w-100">Thêm sản phẩm</button>
