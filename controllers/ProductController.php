@@ -45,7 +45,6 @@ class ProductController
         }
 
         $this->productModel->Insert($name, $price, $img, $cate_id);
+        $this->index();
     }
 }
-
-?>
