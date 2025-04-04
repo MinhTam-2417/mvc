@@ -7,4 +7,6 @@ match ($action) {
     'DeleteProduct'          => (new ProductController)->deleteProduct(),
     'addProduct'             => (new ProductController)->addProduct(),
     'addProcess'             => (new ProductController)->addProcess(),
+    'updateProduct'          => (new ProductController)->updateProduct(),
+    'updateProcess'          => (new ProductController)->updateProcess(),
 };

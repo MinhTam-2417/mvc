@@ -38,4 +38,34 @@ class ProductModel extends BaseModel
 
         $stmt->execute();
     }
+
+    public function getProductByID($id){
+
+        $sql = "SELECT * FROM `products` WHERE `products`.`product_id` = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        $stmt->execute();
+
+        return $stmt->fetch();
+    }
+
+    public function Update($name, $price, $img, $cate_id, $product_id)
+    {
+        $sql = "UPDATE `products`
+                SET `product_name` = ':name', `product_price` = ':price', `product_img` = ':img', `Category_id` = ':cate_id'
+                WHERE `products`.`product_id` = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':price', $price);
+        $stmt->bindParam(':img', $img);
+        $stmt->bindParam(':cate_id', $cate_id);
+        $stmt->bindParam(':id', $product_id);
+        
+        $stmt->execute();
+    }
 }

@@ -47,4 +47,27 @@ class ProductController
         $this->productModel->Insert($name, $price, $img, $cate_id);
         $this->index();
     }
+
+    public function updateProduct()
+    {
+        $id = $_GET['id'];
+        $category = $this->cateModel->getAll();
+        $products = $this->productModel->getProductByID($id);
+        require_once PATH_VIEW . 'UpdateProduct.php';
+
+    }
+
+    public function updateProcess(){
+
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+        $img = $_POST['img'];
+        $cate_id = $_POST['cate_id'];
+        
+        $product_id = $_POST['id'];
+
+        $this->productModel->Update($name, $price, $img, $cate_id, $product_id);
+        $this->index();
+
+    }
 }
