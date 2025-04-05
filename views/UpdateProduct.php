@@ -14,7 +14,7 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h2>Nhập thông tin sản phẩm</h2><br><br>
+                        <h2>Chan đê</h2>
                         <form action="?action=updateProcess&id=<?= $products['product_id'] ?>" method="POST">
 
                             <div class="mb-3">
