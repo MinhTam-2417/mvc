@@ -52,10 +52,10 @@ class ProductModel extends BaseModel
         return $stmt->fetch();
     }
 
-    public function Update($name, $price, $img, $cate_id, $product_id)
+    public function Update($product_id, $name, $price, $img, $cate_id)
     {
-        $sql = "UPDATE `products`
-                SET `product_name` = ':name', `product_price` = ':price', `product_img` = ':img', `Category_id` = ':cate_id'
+        $sql = "UPDATE `products` 
+                SET `product_name` = :name, `product_price` = :price, `product_img` = :img, `Category_id` = :cate_id 
                 WHERE `products`.`product_id` = :id";
 
         $stmt = $this->pdo->prepare($sql);

@@ -59,14 +59,14 @@ class ProductController
 
     public function updateProcess(){
 
+        $product_id = $_GET['id'];
+
         $name = $_POST['name'];
         $price = $_POST['price'];
         $img = $_POST['img'];
         $cate_id = $_POST['cate_id'];
         
-        $product_id = $_POST['id'];
-
-        $this->productModel->Update($name, $price, $img, $cate_id, $product_id);
+        $this->productModel->Update($product_id, $name, $price, $img, $cate_id);
         $this->index();
 
     }

@@ -15,7 +15,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h2>Nhập thông tin sản phẩm</h2><br><br>
-                        <form action="?action=updateProcess" method="POST">
+                        <form action="?action=updateProcess&id=<?= $products['product_id'] ?>" method="POST">
 
                             <div class="mb-3">
                                 <label class="form-label" for="id">ID sản phẩm</label>
@@ -36,15 +36,17 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="img">Ảnh sản phẩm (URL):</label>
-                                <input class="form-control" type="text" name="img" value="img"
-                                    <?= $products['product_img'] ?>>
+                                <input class="form-control" type="text" name="img" 
+                                    value = "<?= $products['product_img'] ?>">  
                             </div><br>
 
                             <div class="mb-3">
                                 <label class="form-label" for="cate_id">Danh mục:</label>
                                 <select name="cate_id" class="form-control">
                                     <?php foreach ($category as $cate) { ?>
-                                        <option value="<?= $cate['category_id'] ?>"><?= $cate['category_name']; ?></option>
+                                        <option value="<?= $cate['category_id'] ?>" <?php if($cate['category_id']== $products['category_id']) echo "selected"?> >
+                                            <?= $cate['category_name'] ?>
+                                        </option>
                                     <?php } ?>
                                 </select>
                             </div><br>
