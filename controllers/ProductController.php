@@ -38,7 +38,7 @@ class ProductController
         $name = $_POST['name'];
         $price = $_POST['price'];
         $img = $_FILES['img'];
-        $pro_img=upload_file('product',$img);
+        $product_img=upload_file('product',$img);
         
         $cate_id = $_POST['cate_id'];
 
@@ -46,7 +46,7 @@ class ProductController
             die("Vui lòng nhập đầy đủ thông tin sản phẩm!");
         }
 
-        $this->productModel->Insert($name, $price, $pro_img, $cate_id);
+        $this->productModel->Insert($name, $price, $product_img, $cate_id);
         $this->index();
     }
 

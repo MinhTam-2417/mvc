@@ -18,6 +18,6 @@ if (!function_exists('upload_file')) {
             return $targetFile;
         }
 
-        throw new Exception('Upload file không thành công!');
+        // throw new Exception('Upload file không thành công!');
     }
 }

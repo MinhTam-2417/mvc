@@ -4,7 +4,7 @@ class ProductModel extends BaseModel
     protected $table = "products";
     public function getAll()
     {
-        $sql = "SELECT * FROM " . $this->table;
+        $sql = "SELECT `products` .*, `category`.`category_name` FROM `products` JOIN `category` ON `products`.`category_id` = `category`.`category_id`";
 
         $smtm = $this->pdo->prepare($sql);
 

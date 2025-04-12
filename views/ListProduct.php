@@ -34,10 +34,11 @@
                             <td><?= $stt; ?></td>
                             <td><?= $item['product_name'] ?></td>
                             <td><?= $item['product_price'] ?></td>
-                            <td>
-                                <img width="100px" src="<?= BASE_ASSETS_UPLOADS . $item['product_img'] ?>">
-                            </td>
-                            <td><?= $item['category_id'] ?></td>
+                            <td> <img width="100px" src="<?= BASE_ASSETS_UPLOADS . $item['product_img'] ?>"> </td>
+                            <td> <?= $item['category_name'] ?> </td>
+
+
+
                             <td>
                                 <a class="btn btn-danger" href="?action=DeleteProduct&id=<?= $item['product_id'] ?>">Xóa</a>
                                 <!--
@@ -46,15 +47,8 @@
                                 - vào trong control tạo biến nhận id đc gửi lên
                                 - trỏ đến model để xử lý sql xóa với db
                                 -->
-                                <a class="btn btn-primary" href="?action=updateProduct&id=<?= $item['product_id'] ?>">Sửa</a>
-                                <!-- 
-                                - lấy id của sp cần sửa
-                                - gửi id lên GET
-                                - vào trong control lấy id
-                                - xử lý lấy thông tin của sp có id vừa lấy ?????????
-                                - trỏ đến view để hiển thị thông tin của sp có id được gửi lên cho client sửa
-                                - action của form sửa gửi đến model để xử lý update với db
-                                -->
+                                <a class="btn btn-primary"
+                                    href="?action=updateProduct&id=<?= $item['product_id'] ?>">Sửa</a>
                             </td>
                         </tr>
 
