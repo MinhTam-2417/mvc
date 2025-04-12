@@ -15,7 +15,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h2>Chan đê</h2>
-                        <form action="?action=updateProcess&id=<?= $products['product_id'] ?>" method="POST">
+                        <form action="?action=updateProcess&id=<?= $products['product_id'] ?>" enctype="multipart/form-data" method="POST">
 
                             <div class="mb-3">
                                 <label class="form-label" for="id">ID sản phẩm</label>
@@ -36,7 +36,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="img">Ảnh sản phẩm (URL):</label>
-                                <input class="form-control" type="text" name="img" 
+                                <input class="form-control" type="file" name="img" 
                                     value = "<?= $products['product_img'] ?>">  
                             </div><br>
 

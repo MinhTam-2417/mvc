@@ -34,7 +34,9 @@
                             <td><?= $stt; ?></td>
                             <td><?= $item['product_name'] ?></td>
                             <td><?= $item['product_price'] ?></td>
-                            <td><?= $item['product_img'] ?></td>
+                            <td>
+                                <img width="100px" src="<?= BASE_ASSETS_UPLOADS . $item['product_img'] ?>">
+                            </td>
                             <td><?= $item['category_id'] ?></td>
                             <td>
                                 <a class="btn btn-danger" href="?action=DeleteProduct&id=<?= $item['product_id'] ?>">Xóa</a>

@@ -15,7 +15,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h2>Nhập thông tin sản phẩm</h2>
-                        <form action="?action=addProcess" method="POST">
+                        <form action="?action=addProcess" method="POST" enctype="multipart/form-data">
 
                             <div class="mb-3">
                                 <label class="form-label" for="name">Tên sản phẩm:</label>
@@ -29,7 +29,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="img">Ảnh sản phẩm (URL):</label>
-                                <input class="form-control" type="text" name="img"><br>
+                                <input class="form-control" type="file" name="img"><br>
                             </div>
 
                             <div class="mb-3">
